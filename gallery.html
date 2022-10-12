@@ -29,32 +29,66 @@
   </head>
 
   <body>
-    <header class="header">
+    <header id="site-header" class="fixed-top">
       <div class="container">
-        <div class="header__left">
-            <div>
-              <a href="">Pooch Care</a>
-            </div>
-        </div>
-        <div class="header__right">
-            <div class="header__right-list">
-                <ul>
-                  <li><a href="">Home</a></li>
-                  <li class="active"><a href="">About</a></li>
-                  <li><a href="">Services</a></li>
-                  <li><a href="">Gallery</a></li>
-                  <li>
-                    <a href="">Blog</a>
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </li>
-                  <li><a href="">Contact</a></li>
-                </ul>
-               
-            </div>
-            <div class="header__right-btn">
-              <i class="fa-regular fa-moon"></i>
-            </div>
-        </div>
+          <nav class="navbar navbar-expand-lg stroke">
+              <h1><a class="navbar-brand" href="index.html">
+                   Pooch Care
+              </a></h1>
+             
+              <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                  data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                  <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                  </span>
+              </button>
+    
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                  <ul class="navbar-nav ml-auto">
+                      <li class="nav-item active">
+                          <a class="nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="about.html">About</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="services.html">Services</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="gallery.html">Gallery</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle">
+                              Blog
+                          </a>
+                          <div class="dropdown-menu " aria-labelledby="navbarDropdown1">
+                              <a class="dropdown-item" href="blog.html">Blog Posts</a>
+                              <a class="dropdown-item" href="blog-single.html">Blog single</a>
+                               <a class="dropdown-item" href="landing-single.html">Landing Page</a>
+                          </div>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="contact.html">Contact</a>
+                      </li>
+                  </ul>
+              </div>
+              <!-- toggle switch for light and dark theme -->
+              <div class="mobile-position">
+                  <nav class="navigation">
+                      <div class="theme-switch-wrapper">
+                          <label class="theme-switch" for="checkbox">
+                              <input type="checkbox" id="checkbox">
+                              <div class="mode-container">
+                                  <i class="gg-sun"></i>
+                                  <i class="gg-moon"></i>
+                              </div>
+                          </label>
+                      </div>
+                  </nav>
+              </div>
+              <!-- //toggle switch for light and dark theme -->
+          </nav>
       </div>
     </header>
 
@@ -244,5 +278,27 @@
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      var toggle = document.querySelector('.dropdown-toggle')
+      var toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+      
+      document.querySelector('.dropdown-menu')
+      toggle.onclick = function() {
+          document.querySelector('.dropdown-menu').classList.toggle('show')
+      }
+
+
+
+      function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      
+    }
+}
+toggleSwitch.addEventListener('change', switchTheme);
+  </script>
   </body>
 </html>
