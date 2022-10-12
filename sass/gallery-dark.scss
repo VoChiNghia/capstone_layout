@@ -67,7 +67,7 @@ html{
                                 font-size: 1.2em;
                                 font-weight: 400;
                                 position: relative;
-                               color: $heading-color;
+                               color: $heading-color; 
                                 &::before{
                                     content: " ";
                                     position: absolute;
@@ -268,7 +268,7 @@ html{
     }
     .gallery-header{
         text-align: center;
-        margin-top: 50px;
+        padding-top: 50px;
         p{
             color:red;
         }
