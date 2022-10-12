@@ -1,16 +1,20 @@
 @import './base';
-@import './varible';
+@import './varible-dark';
 
 *{
     font-family: 'Jost', sans-serif;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
+html{
+  background-color: $bg-color;
+}
 .flex{
     display: flex;
     justify-content: space-between;
     align-items: center; 
 }
+
 .fixed-top {
     position: fixed;
     top:40px;
@@ -43,7 +47,7 @@
                             position: relative;
                             
                            cursor: pointer;
-
+                           
                            &.active .nav-link{
                             color:$primary-color;
                             &::before{
@@ -56,10 +60,6 @@
                               bottom: 0;
                           }
                         }
-
-
-
-                            
                             .nav-link{
                                 text-transform: capitalize;
                                 transition: all 0.5s ease;
@@ -67,7 +67,7 @@
                                 font-size: 1.2em;
                                 font-weight: 400;
                                 position: relative;
-                                color: $heading-color;
+                               color: $heading-color;
                                 &::before{
                                     content: " ";
                                     position: absolute;
@@ -114,6 +114,7 @@
     border-radius: 100px;
     box-shadow: inset 0 0 0 2px;
     border: 6px solid transparent;
+   
   }
   
   .gg-moon {
@@ -215,9 +216,11 @@
     margin-top: 90px;
     background-image: url('../image/banner4.jpg ');
     background-position: center center;
+    background-repeat: no-repeat;
     text-align: center;
     padding:50px 0;
     position: relative;
+    margin-bottom: 0;
     &::before{
         content:"";
         position: absolute;
@@ -256,225 +259,64 @@
         }
     }
 }
-.about__us{
+
+.gallery{
+    padding-bottom: 50px;
     background-color: $bg-color;
     .container{
-        padding: 80px 0;
-        display: flex;
-        align-items: center;
-        .about__us-left{
-            flex:1;
-            p{
-                color: red;
-                font-size: 20px;
-            }
-            h2{
-                font-size: 40px;
-                font-weight: 600;
-                line-height: 48px;
-                text-transform: capitalize;
-            }
-        }
-        .about__us-right{
-            flex:1;
-            p{
-                font-size: 18px;
-                line-height: 28px;
-                color: $font-color;
-            }
-            a{
-                color:$heading-color;
-                font-size: 15px;
-                font-weight: 600;
-                position: relative;
-                &::after{
-                    content:"";
-                    position:absolute;
-                    width: 100%;
-                    height: 2px;
-                    background-color: $primary-color;
-                    bottom:-5px;
-                    left: 0;
-                }
-                &:hover{
-                    color:$primary-color;
-                    transition: all 0.5s; 
-                }
-            }
-        }
-    }
-}
-.history{
-    background-image: url(../image/banner2.jpg);
-    background-position: center;
-    position: relative;
-    padding: 50px 0;
-    &::after{
-        content:"";
-        position: absolute;
-        width: 100%;
-        top: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.537);
-    }
-    .container{
-       position: relative;
-       z-index: 2;
-       
-        .history-wrapper{
-            max-width: 640px;
-            margin-left: auto;
 
-            .history-title{
-                color: red;
-            }
-            .history-name{
-                color: #fff;
-            }
-            .history-desc{
-                color: rgb(178, 176, 176);
-                font-size: 18px;
-            }
-            .history-list{
-               ul{
-                display: flex;
-                padding: 0;
-                li{
-                    h6{
-                        color: #fff;
-                        font-size: 20px;
-                        font-weight: 700;
-                        margin-bottom: 6px;    
-                    }
-                    p{
-                        color: rgb(178, 176, 176); 
-                        padding-right: 40px;
-                        font-size: 18px;
-                    }
-                }
-               }
-            }
+    }
+    .gallery-header{
+        text-align: center;
+        margin-top: 50px;
+        p{
+            color:red;
+        }
+        h1{
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 48px;
+            text-transform: capitalize;
+            color: $font-color;
         }
     }
-}
-.feature{
-    padding:50px 0;
-    .container{
-        display: flex;
-        .feature-left{
-            text-align: right;
-            margin-right: 30px;
-            flex:1;
-            .feature-title{
-                color: red;
-            }
-            .feature-name{
-                font-weight: 600;
-            }
-            .feature-desc{
-                color: $font-color;
-                word-spacing:2px;
-            }
+    .gallery-card{
+        border-radius: 10px;
+        overflow: hidden;
+       margin-bottom: 20px;
+        position: relative;
 
-            img{
-                max-width: 80%;
-                border-radius: $border-radius;
-            }
-        }
-        .feature-right{
-            flex:1;
-            margin-left: 30px;
-            .feature-list{
-                .feature-list-item{
-                    display: flex;
-                    margin-bottom: 15px;
-                    .logo{
-                        i{
-                            font-size: 40px;
-                            margin-right: 20px;
-                            color: $primary-color;
-                        }
-                    }
-                   .content{
-                    h5{
-                        font-size: 25px;
-                        font-weight: 600;
-                        color: $heading-color;
-                        &:hover{
-                            color: $primary-color;
-                        }
-                    }
-                    p{
-                        color: $font-color;
-                    }
-                   } 
-                }
-            }
-        }
-    }
-}
-.our__team{
-    background-color: $bg-light;
-    padding: 50px 0;
-    .container{
-        display: flex;
-        flex-direction: column;
-        .our__team-title{
-            text-align: center;
-            margin-bottom: 40px;
-            p{
-                color:red;
-            }
-            h1{
-               
-            }
-        }
-        .our__team__card{
-            text-align: center;
-            .our__team-card{
-                .img-wrapper{
-                    overflow: hidden;
-                    img{
-                        width: 100%;
-                        border-radius:10px;
-                        
-                        &:hover{
-                           transform:scale(1.1);
-                           transition: all 0.5s;
-                        }
-                    }
-                }
+
+            &::before{
+                content: "";
+                width: 50%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: -100%;
+                display: block;
+                background: linear-gradient(to right,rgba(255,255,255,0) 0,rgba(255,255,255,.3) 100%);
+                transform: skewX(-25deg);
+                transition: all .75s;
                 
-                h2{
-                    font-size: 22px;
-                    margin-top: 20px;
-                    color: $heading-color;
-                   }
-                   p{
-                    color:$font-color ;
-                   }
-                .icon{
-                    display: flex;
-                   justify-content:center;
-                   div{
-                    margin-right: 6px;
-                    background-color: $bg-light;
-                    color: $primary-color;
-                    padding:0 10px;
-                    border-radius: 2px;
-                    i{
-                      font-size: 10px;
-                    }
-                   }
-                   
-                }
             }
+            &:hover:before{
+                left: 100%;
+            }
+        
+        img{
+            width: 100%;
+            border-radius: 10px;
+            
         }
     }
 }
+
 .footer-bg{
+   padding-top: 50px;
      background-color: #000;
      .container{
+        
         width: 100%;
         .row{
             width: 100%;

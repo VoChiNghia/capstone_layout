@@ -1,10 +1,13 @@
 @import './base';
-@import './varible';
+@import './varible-dark';
 
 *{
     font-family: 'Jost', sans-serif;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+}
+html{
+    background-color: $bg-color;
 }
 .flex{
     display: flex;
@@ -257,7 +260,7 @@
     }
 }
 .about__us{
-    background-color: $bg-color;
+  background-color: $bg-color;
     .container{
         padding: 80px 0;
         display: flex;
@@ -358,7 +361,8 @@
     }
 }
 .feature{
-    padding:50px 0;
+    padding: 50px 0;
+    background-color: $bg-color;
     .container{
         display: flex;
         .feature-left{
@@ -474,6 +478,7 @@
 }
 .footer-bg{
      background-color: #000;
+     padding: 50px 0;
      .container{
         width: 100%;
         .row{

@@ -4,7 +4,8 @@ $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
 
-$primary-color: #189A46;
+   
+    $primary-color: #189A46;
     $secondary-color: #f53626;
     $font-color: #696969;
     $bg-color: #fff;
@@ -17,21 +18,9 @@ $primary-color: #189A46;
     $bg-light: rgba(147, 107, 232, 0.05);
     $iframe-filter: grayscale(0%);
     $widget-bg: #3f3a64;
+   
 
-[data-theme="dark"] {
-    $primary-color: #189A46;
-    $secondary-color: #f53626;
-    $font-color: #afafaf;
-    $bg-color: #151515;
-    $heading-color: #ddd;
-    $border-color: #333;
-    $border-light: #444;
-    $nav-color: #fff;
-    $bg-light: #222;
-    $dropdown-color: #151515;
-    $iframe-filter: grayscale(100%);
-    $widget-bg: #131617;
-}
+ 
 
 
 

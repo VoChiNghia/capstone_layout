@@ -25,7 +25,7 @@
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;1,200&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/services.min.css">
+    <link rel="stylesheet" href="./css/services.min.css" id="link-theme">
   </head>
 
   <body>
@@ -46,13 +46,13 @@
     
               <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                   <ul class="navbar-nav ml-auto">
-                      <li class="nav-item active">
+                      <li class="nav-item">
                           <a class="nav-link" href="index.html">Home</a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link" href="about.html">About</a>
                       </li>
-                      <li class="nav-item">
+                      <li class="nav-item active">
                           <a class="nav-link" href="services.html">Services</a>
                       </li>
                       <li class="nav-item">
@@ -282,10 +282,10 @@
 
       function switchTheme(e) {
     if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+      document.getElementById('link-theme').href = "./css/services-dark.min.css"
       
     } else {
-        document.documentElement.setAttribute('data-theme', 'light');
+      document.getElementById('link-theme').href = "./css/services.min.css"
       
     }
 }
