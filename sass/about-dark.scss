@@ -218,6 +218,7 @@ html{
     margin-top: 90px;
     background-image: url('../image/banner4.jpg ');
     background-position: center center;
+   
     text-align: center;
     padding:50px 0;
     position: relative;
@@ -276,6 +277,7 @@ html{
                 font-weight: 600;
                 line-height: 48px;
                 text-transform: capitalize;
+                color: $heading-color;
             }
         }
         .about__us-right{
