@@ -303,9 +303,11 @@
       function switchTheme(e) {
     if (e.target.checked) {
       document.getElementById('link-theme').href = "./css/gallery-dark.min.css"
+      localStorage.setItem('theme', 'dark');
       
     } else {
       document.getElementById('link-theme').href = "./css/gallery.min.css"
+      localStorage.setItem('theme', 'light');
       
     }
 }

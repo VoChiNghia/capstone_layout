@@ -295,9 +295,11 @@
       function switchTheme(e) {
     if (e.target.checked) {
       document.getElementById('link-theme').href = "./css/services-dark.min.css"
+      localStorage.setItem('theme', 'dark');
       
     } else {
       document.getElementById('link-theme').href = "./css/services.min.css"
+      localStorage.setItem('theme', 'light');
       
     }
 }

@@ -383,6 +383,7 @@
       
       if(currentTheme === "light"){
         document.getElementById('link-theme').href = "./css/about.min.css"
+       
       }
       if(currentTheme === "dark"){
         document.getElementById('link-theme').href = "./css/about-dark.min.css"
@@ -396,9 +397,11 @@
        
         document.getElementById('link-theme').href = "./css/about-dark.min.css"
        // localStorage.setItem('theme', './css/about-dark.min.css');
+       localStorage.setItem('theme', 'dark');
     } else {
       document.getElementById('link-theme').href = "./css/about.min.css"
      // localStorage.setItem('theme', './css/about.min.css');
+     localStorage.setItem('theme', 'light');
       
     }
     

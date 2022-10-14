@@ -297,9 +297,11 @@
       function switchTheme(e) {
     if (e.target.checked) {
       document.getElementById('link-theme').href = "./css/contact-dark.min.css"
+      localStorage.setItem('theme', 'dark');
       
     } else {
       document.getElementById('link-theme').href = "./css/contact.min.css"
+      localStorage.setItem('theme', 'light');
       
     }
 }
