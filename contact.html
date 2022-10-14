@@ -285,6 +285,7 @@
     <script>
       var toggle = document.querySelector('.dropdown-toggle')
       var toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+      const currentTheme = localStorage.getItem('theme');
       
       document.querySelector('.dropdown-menu')
       toggle.onclick = function() {

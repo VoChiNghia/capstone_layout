@@ -276,10 +276,18 @@
     <script>
       var toggle = document.querySelector('.dropdown-toggle')
       var toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+      const currentTheme = localStorage.getItem('theme');
       
       document.querySelector('.dropdown-menu')
       toggle.onclick = function() {
           document.querySelector('.dropdown-menu').classList.toggle('show')
+      }
+
+      if(currentTheme === "light"){
+        document.getElementById('link-theme').href = "./css/services.min.css"
+      }
+      if(currentTheme === "dark"){
+        document.getElementById('link-theme').href = "./css/services-dark.min.css"
       }
 
 
